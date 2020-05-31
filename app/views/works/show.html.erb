@@ -1,0 +1,19 @@
+<h1>id:<%= @work.id %> detailed Information</h1>
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <td><%= @work.id %></td>
+    </tr>
+    <tr>
+        <th>Title</th>
+        <td><%= @work.title %></td>
+    </tr>
+    <th>Content</th>
+    <td><%= @work.content %></td>
+</table>
+
+
+<%= link_to 'Return to First Page', works_path,class: "btn btn-info btn-lg active" %>
+<%= link_to 'Edit Task', edit_work_path,class: "btn btn-secondary btn-lg active" %>
+<%= link_to 'Delete This Task', @work, method: :delete, data: { confirm: 'Are you sure to delete this task？' },class: "btn btn-danger btn-lg active" %>
