@@ -2,7 +2,7 @@ class WorksController < ApplicationController
     
     before_action :set_work, only: [:show, :edit, :destroy, :update]
     def index
-        @works = Work.order(id: :desc).page(params[:page]).per(3)
+        @works = Work.order(id: :desc).page(params[:page]).per(10)
     end
     def create
         @work = Work.new(works_params)

@@ -1,0 +1,17 @@
+<% if logged_in? %>
+<p>Logged in User:<%= current_user.name%></p>
+<% else %>
+
+
+
+    <div class="center jumbotron-fluid">
+        <div class="text-center">
+          <h1 class="mb-3">TODAY'S MY WORK</h1>
+          <div class="container">
+            <%= image_tag "/toppage.png" ,class: "img-fluid" %>
+            <%= link_to 'Sign up now', signup_path, class: 'btn btn-block btn-info mt-3' %>
+          </div>
+        </div>
+    </div>
+<% end %>
+
